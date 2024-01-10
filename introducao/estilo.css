@@ -1,0 +1,28 @@
+h1{
+    font-family: 'Times New Roman';
+    color: #FF0088;
+    font-weight: bolder;
+}
+.nome{
+    text-align: center;
+    font-size: large;
+    color: #5AB9FF;
+    font-family:'Franklin Gothic Medium';
+    background-color: black;
+}
+.objetivo{
+    text-align: center;
+    font-size: large;
+    color:#5AB9FF;
+    font-family:'Franklin Gothic Medium';
+    background-color: black;
+}
+ul{
+    text-align: right;
+    background-color: aliceblue;
+    text-decoration: overline;
+}
+li{
+    background-color: #FF0088;
+    color: #FFFFFF;
+}
