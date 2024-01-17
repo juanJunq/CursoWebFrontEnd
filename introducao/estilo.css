@@ -1,7 +1,20 @@
-h1{
-    font-family: 'Times New Roman';
-    color: #FF0088;
-    font-weight: bolder;
+body{
+    background-color: lightgray;
+}
+/*
+    # = atributo id
+    OBS : utilizar o atributo id no titulo, nesse caso, nao e adequado, visto que 
+    ha a possibilidade de querer reutilar a mesma formatacao em outros titulos. O
+    atributo id remete a elemento unico
+*/
+#titulo{
+    /*  Mais de 1 font-family 
+        = para garantir a aplicacao de uma fonte caso o sistema do usuario nao contenha uma fonte especifica
+        Ordem das fontes = hierarquia, prioridade de aplicacao
+    */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #003F88;
+    text-transform: uppercase;
 }
 .nome{
     text-align: center;
@@ -25,4 +38,33 @@ ul{
 li{
     background-color: #FF0088;
     color: #FFFFFF;
+    text-transform: capitalize;
+}
+.lorem-1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    font-size: 28px;
+    text-indent: 56px;
+    font-style: italic;
+    color: #00FF00;
+    background-color: black;
+}
+.lorem-2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #9900FF;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+a{
+    font-size: 10px;
+    text-decoration: none;
+    color:black;
+    font-style: italic;
+    text-transform: uppercase;
+}
+h2{
+    font-weight: normal;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
 }

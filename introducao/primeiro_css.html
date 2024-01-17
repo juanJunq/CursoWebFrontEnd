@@ -5,19 +5,26 @@
     <meta name="author" content="Juan Marques Junqueira">
     <meta name="description" content="Primeiro .css">
     <!--Arquivo CSS EXTERNO 
-        = relacao de stylesheet com a pagina html 
+        = relacao de stylesheet com a pagina html, vinculo 
+    -->
+    <!--OBS : NIVEL DE PRIORIDADE
+        style INLINE > style INTERNO > style EXTERNO
+    -->
+    <!--OBS 2 : CSS EXTERNO tag <link>
+        MANUTENCAO = modificacao de apenas 1 arquivo; aplicacao de um estilo em varios arquivos HTML
+        PERFORMANCE = navegador armazena .css em cache; tag <style> aumenta o tamanho do arquivo HTML
     -->
     <link href="estilo.css" rel="stylesheet">
     <title>Primeiro CSS</title>
 </head>
 <body>
-    <h1>Curriculum vitae com CSS</h2>
+    <h1 id="titulo">Curriculum vitae com CSS</h2>
     <hr>
     <!--
         atributo class = delimitar uma tag
         OBS: atributo 'id' = um por pagina(unico, especifico, especial, 'mais importante')
     -->
-    <p class="nome"> <b>Nome:</b> Juan Marques Junqueira </p>
+    <p class="nome" style="color: crimson;"> <b>Nome:</b> Juan Marques Junqueira </p>
     <p class="objetivo"> <b>Objetivo:</b> Webdesigner / Programador FrontEnd </p>
     <hr>
     <h2>Qualificacoes Profissionais</h2>
@@ -25,5 +32,7 @@
         <li>Conhecimento de informatica</li>
         <li>Jogador de basquete semi-profissional</li>
     </ul>
+    <p class="lorem-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, consequatur?</p>
+    <p class="lorem-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. <a href="#">Voluptas</a> eligendi voluptates ut consectetur quis a earum distinctio nihil facere illo!</p>
 </body>
 </html>

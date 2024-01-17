@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        h1{
+            background-color: #ccc;
+            width: 50%;
+            margin-bottom: 0;
+            border-top: 5px dashed blue ;
+            border-right: 30px double greenyellow;
+            border-bottom: 15px dotted purple;
+            border-left: 35px solid darkred;
+        }
+        h2{
+            background-color: #AAFFB4;
+            margin-top: 0;
+        }
+        p{
+            background-color: #FFAA3A;
+        }
+        .destaque{
+            background-color: #dc143c;
+        }
+        .size{
+            /*
+                porcentagem em WIDTH = referente a tag pai
+                tag pai de <p> => <body>
+            */
+            width: 25%;
+            height:150px;
+        }
+        /*
+            padding = espacamento INTERNO entre um elemento e sua borda
+            OBS : de fora para dentro -> MARGIN // BORDER // PADDING // elemento
+        */
+        .padding{
+            /*
+                TOP - RIGHT - BOTTOM - LEFT
+            */
+            padding: 100px 50px 50px 75px;
+        }
+        .margin{
+            /*
+                margin = espacamento EXTERNO
+            */
+            margin: 100px 150px 50px 200px;
+        }
+        .border{
+            /*
+                border = 'contorno'; intermediario(entre MARGIN e PADDING)
+            */
+            /*
+                border: WIDTH STYLE COLOR
+                OBS : e possivel trabalhar com os valores individualmente . EX:
+                    border-top-[color] , [style] , [width]
+                    . . . -right- . . .
+                    . . . -bottom- . . .
+                    . . . -left- . . .
+            */
+            border: 10px solid blue;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Model</h1>
+
+    <h2>Width e Height</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="destaque size">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>Padding</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="destaque padding">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>Margin</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="destaque margin">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>Border</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="destaque border">Lorem ipsum dolor sit amet.</p>
+    <hr>
+    <p style="border: 10px solid black; padding:10px;">BORDER SOLID</p>
+    <p style="border: 10px dotted black; padding:10px;">BORDER DOTTED</p>
+    <p style="border: 10px dashed black; padding:10px;">BORDER DASHED</p>
+    <p style="border: 10px double black; padding:10px;">BORDER DOUBLE</p>
+    <p style="border: 10px groove black; padding:10px;">BORDER GROOVE</p>
+    <p style="border: 10px ridge black; padding:10px;">BORDER RIDGE</p>
+    <p style="border: 10px inset black; padding:10px;">BORDER INSET</p>
+    <p style="border: 10px outset black; padding:10px;">BORDER OUTSET</p>
+</body>
+</html>
