@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Imagens</title>
+    <style>
+        body{
+            font-size: 22px;
+            font-family: sans-serif;
+            width: 700px;
+            margin: auto;
+            background-image: url(imagens/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            /*
+                background-size: 
+                contain = imagem sempre visualizada em sua totalidade(mesmo que duplicada); preferencia pelo conteudo
+                cover = ocupa toda a area disponivel mesmo que parte da imagem fique escondida
+            */
+            background-attachment: fixed;
+            /*
+                fixed = imagem bg nao scrolla junto com a pagina
+                [valor default] = scroll -> imagem scrolla junto
+            */
+            background-position: bottom;
+            /*
+                background-position: [right / left] [top / bottom]
+                Determina o ponto inicial da imagem, 'onde comeca'. 
+                Por padrao, a imagem e posicionada no topo da esquerda
+            */
+        }
+        .img-logo{
+            width: 300px;
+            /*
+                A imagem vetorial se ajustou, mantendo a resolucao
+                A imagem bitmap nao se ajustou, perdendo resolucao
+            */
+        }
+        p{
+            line-height: 1.5;
+            text-align: justify;
+        }
+        .img-html{
+            float: left;
+            /*
+                float = 'posicionamento' da imagem
+            */
+        }
+        .img-css{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagens</h1>
+    <h2>Imagem vetorial vs bitmap</h2>
+    <!--
+        vetorial = posicao / valores obtidos atraves de calculos. Ou seja, se ajusta a resolucao
+        bitmap = posicao / valores 'fixos'. Nao se ajusta a resolucao
+    -->
+    <!--
+        propriedade ALT = importante para questoes de acessibilidade('descricao da imagem') e para
+        SEO
+    -->
+    <img src="imagens/logo_ser-frontend-ico.png" alt="" class="img-logo">
+    <br>
+    <img src="imagens/logo_ser-frontend-ico.svg" alt="" class="img-logo">
+    <h2>Imagens transparentes</h2>
+    <img src="imagens/logo_ser-frontend-ico-transparente.gif" alt="" class="img-logo">
+    <!--
+        A imagem .gif tem uma 'transparencia mais bruta'. Os pixels nao conseguem assumir uma
+        transparencia gradual, o que ocasiona numa transicao 'mais dura' entre os elementos
+        coloridos e transparentes
+    -->
+    <br>
+    <img src="imagens/logo_ser-frontend-ico-transparente.png" alt="" class="img-logo">
+    <h2>gif animado</h2>
+    <img src="imagens/walk.gif" alt="">
+    <h2>Propriedade float</h2>
+    <img src="imagens/html5.png" alt="" class="img-html">    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nihil error deleniti, magni aspernatur minima corporis quas illum excepturi quae, fuga, id voluptates quam? Itaque voluptas aliquam expedita enim architecto?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, architecto ipsam. Id fugiat nam, quas architecto natus, illum cumque eveniet repellendus minima, ullam magni explicabo officia amet laborum officiis unde ut consectetur repellat mollitia dolorem labore temporibus quia. Explicabo fugit temporibus accusamus ratione voluptatum eveniet eaque fuga perspiciatis commodi tempore quo consectetur, rerum pariatur illo nulla assumenda ex reprehenderit inventore nesciunt laborum neque. Libero, sequi quae quis perspiciatis ipsa delectus pariatur, velit voluptatem molestiae assumenda saepe officia. Sint aliquid quaerat est laborum nostrum veniam sequi tempore eaque ut fugiat corporis maiores quia unde repudiandae perspiciatis error reiciendis, nihil repellat quo.</p>
+    <img src="imagens/css3.png" alt="" class="img-css">    
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus ipsam placeat, ea, quod quia amet nobis
+        libero odio at voluptates doloremque laudantium magni! Iusto, cupiditate labore pariatur repudiandae cumque
+        inventore?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime quasi officia modi veritatis dignissimos, quos
+        cumque cupiditate earum doloribus aliquam sed molestias blanditiis quisquam impedit sapiente, commodi eveniet
+        illum laboriosam minus consequatur suscipit architecto repellat illo nobis. Unde odit magni natus id modi
+        tempora odio inventore libero atque fugiat beatae, harum sit quis vero mollitia laudantium. Alias dolor fugiat
+        distinctio ipsum doloribus nemo beatae explicabo nihil? Doloribus culpa necessitatibus distinctio sint. Ad ab
+        corporis explicabo in totam maiores aperiam ullam.</p>
+</body>
+</html>

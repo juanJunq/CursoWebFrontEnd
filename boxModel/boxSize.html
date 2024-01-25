@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: #ccc;
+            width: 500px;
+        }
+        .p1{
+            padding: 25px;
+        }
+        .p2{
+            padding: 25px;
+            border:10px solid green;
+        }
+        .p3{
+            padding: 25px;
+            border:10px solid green;
+            box-sizing: border-box;
+        }
+        a{
+            background-color: yellow;
+            display: block;
+            width: 50%;
+            padding: 20px;
+            margin: 10px;
+            border: 5px solid blue;
+        }
+        b{
+            background-color: #fafafa;
+            display: inline-block;
+            width: 25%;
+            height: 50px;
+            padding: 10px;
+            margin: 0 10px 10px 5px;
+            border-bottom: 5px solid red;
+        }
+        strong{
+            visibility: hidden;
+        }
+        i{
+            display: none;
+        }
+        .inline{
+            display: inline
+            ;
+        }
+    </style>
+    <!--
+        box-sizing: content-box(default) => 
+        Nesse caso, os valores de padding e border sao ADICIONADOS, aumentando o box-sizing(500px + 50px + 20px = 570px)
+        box-sizing: border-box =>
+        Nesse caso, os valores de padding e border 'respeitam' a largura definida, diminuindo o espaco do conteudo
+        e mantendo o box-sizing. Ou seja, dos 500px de width, 50 serao de padding e 20 de border, restando 430px para
+        o conteudo
+    -->
+    <!--
+        elemento INLINE : ocupa 'apenas o espaco necessario'; nao gera quebra de linha. EX : <strong>, <a>, <b>, etc.
+        OBS : elementos INLINE nao devem receber propriedades de box model(width, height,...); resulta em 'comportamento estranho'
+        OBS 2 : para INLINE receber devidamente propriedades de box model => INLINE-BLOCK
+        elemento BLOCK : ocupa a largura maxima disponivel; gera quebra de linha. EX : <p>, <h1>, <ul>, <ol>, <li>, etc.
+    -->
+</head>
+<body>
+    <h1>Box Sizing</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, tenetur debitis explicabo soluta eaque corporis tempore quasi assumenda quae incidunt dignissimos hic magnam. Fugiat harum tempore eaque aliquid eius quod velit, excepturi natus necessitatibus dicta, atque ipsa, hic minima! Praesentium quidem accusantium, dolor hic ea libero ipsam iste ad aperiam!</p>
+    <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, tenetur debitis explicabo soluta eaque corporis tempore quasi assumenda quae incidunt dignissimos hic magnam. Fugiat harum tempore eaque aliquid eius quod velit, excepturi natus necessitatibus dicta, atque ipsa, hic minima! Praesentium quidem accusantium, dolor hic ea libero ipsam iste ad aperiam!</p>
+    <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, tenetur debitis explicabo soluta eaque corporis tempore quasi assumenda quae incidunt dignissimos hic magnam. Fugiat harum tempore eaque aliquid eius quod velit, excepturi natus necessitatibus dicta, atque ipsa, hic minima! Praesentium quidem accusantium, dolor hic ea libero ipsam iste ad aperiam!</p>
+    <p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, tenetur debitis explicabo soluta eaque corporis tempore quasi assumenda quae incidunt dignissimos hic magnam. Fugiat harum tempore eaque aliquid eius quod velit, excepturi natus necessitatibus dicta, atque ipsa, hic minima! Praesentium quidem accusantium, dolor hic ea libero ipsam iste ad aperiam!</p>
+    <p class="p3 inline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, tenetur debitis explicabo soluta eaque corporis tempore quasi assumenda quae incidunt dignissimos hic magnam. Fugiat harum tempore eaque aliquid eius quod velit, excepturi natus necessitatibus dicta, atque ipsa, hic minima! Praesentium quidem accusantium, dolor hic ea libero ipsam iste ad aperiam!</p>
+    <p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, tenetur debitis explicabo soluta eaque corporis tempore quasi assumenda quae incidunt dignissimos hic magnam. Fugiat harum tempore eaque aliquid eius quod velit, excepturi natus necessitatibus dicta, atque ipsa, hic minima! Praesentium quidem accusantium, dolor hic ea libero ipsam iste ad aperiam!</p>
+    <p >Lorem ipsum dolor sit <a href="boxModel.html">clique para boxModel.html</a> adipisicing elit. Sequi quia <b>Texto em negrito com b</b> ipsam voluptatum <strong>Texto em negrito com strong</strong>reiciendis ad tenetur <i>display none </i>quis minima molestiae.</p>
+</body>
+</html>
