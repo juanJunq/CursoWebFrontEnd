@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: #ccc;
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 300px;
+            height: 300px;
+        }
+        .item{
+            background-color: blueviolet;
+            margin-bottom: 10px;
+        }
+        .fit-content .item{
+            width: fit-content;
+        }
+        .min-content .item{
+            width: min-content;
+        }
+        .max-content .item{
+            width: max-content;
+        }
+        .overflow-hidden{
+            overflow: hidden;
+        }
+        .overflow-scroll{
+            overflow: scroll;
+        }
+        .overflow-auto{
+            overflow: auto;
+        }
+        .overflow-x{
+            overflow-x: hidden;
+        }
+        .overflow-y{
+            overflow-y: hidden;
+        }
+        /*
+            overflow-x / y = aplica a propriedade apenas no eixo horizontal / vertical
+        */
+    </style>
+</head>
+<body>
+    <div class="container fit-content overflow-hidden">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat molestiae pariatur earum quae dolorem saepe ad dolor ratione, suscipit veniam est unde tempore nam distinctio!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+    </div>
+    <div class="container min-content overflow-scroll">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat molestiae pariatur earum quae dolorem saepe ad dolor ratione, suscipit veniam est unde tempore nam distinctio!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+    </div>
+    <div class="container max-content overflow-auto">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat molestiae pariatur earum quae dolorem saepe ad dolor ratione, suscipit veniam est unde tempore nam distinctio!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+    </div>
+    <div class="container max-content overflow-scroll overflow-y">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat molestiae pariatur earum quae dolorem saepe ad dolor ratione, suscipit veniam est unde tempore nam distinctio!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea enim sequi incidunt magni! Aliquam, soluta! Repudiandae laboriosam reiciendis ratione! Cumque doloremque voluptate eos saepe, voluptas ratione ex quas, nam, perferendis totam dignissimos nulla ipsa rem repellendus beatae! Quasi sapiente, sunt eveniet, eligendi repellendus quos aliquam ullam voluptatum, voluptate alias porro tempore tempora totam perspiciatis illum. Modi fuga omnis nihil blanditiis in nostrum. Consectetur omnis, accusantium sed, neque fugit expedita magnam rem magni ratione eius minima?</div>
+    </div>
+</body>
+</html>

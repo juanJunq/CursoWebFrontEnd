@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*
+            O valor 'position: absolute' se relaciona com o primeiro elemento pai posicionado
+            Ou seja, caso nao haja nenhum elemento posicionado, ira se relacionar com o elemento pai <body>
+            *posicionado => elemento com valores de position que nao sejam default(static)
+            -
+            O valor 'position:fixed' se relaciona com o browser, fica fixado na viewport
+            -
+            O valor 'position:sticky' se relaciona com um elemento pai scrollavel
+            Ou seja, acompanha a rolagem / scroll
+            -
+            O valor 'position:relative' se relaciona com a posicao original do proprio elemento
+            OBS : mesmo com o espacamento, ha a preservacao do espaco original. Ou seja, os elementos
+            irmaos e pai nao 'percebem' o deslocamento, nao sendo afetados
+        */
+        #div1{
+            background-color: rgba(255, 0, 0, .5);
+            width: 90%;
+            height: 100px;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            bottom: 0;
+        }
+        #div2{
+            background-color: rgba(0, 255, 0, .5);
+            width: 70%;
+            height: 50px;
+            padding: 10px;
+            position: relative;
+            left: 50px;
+            bottom: 25px;
+        }
+        #div3{
+            background-color: rgba(0, 0, 255, .5);
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            position: absolute;
+            bottom:5px;
+            right: 5px;
+        }
+        #div4{
+            background-color: rgba(0, 255, 255, .5);
+            width: 10px;
+            height: 10px;
+            padding: 10px;
+            position: fixed;
+            top: 50px;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>   
+    <div id="div1">
+        1
+        <div id="div2">
+            2
+            <div id="div3">
+                3
+                <div id="div4">
+                    4
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur officiis reprehenderit, veritatis voluptatum qui provident placeat tempora accusamus suscipit, asperiores impedit minus voluptas amet dolorum ab? Molestias, provident aperiam?</p>
+</body>
+</html>
