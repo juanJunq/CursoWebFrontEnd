@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*
+            OBS : DEFINICOES BASEADAS EM 'display-direction: row'(default)
+            ONDE 'main axis = EIXO X' e 'cross axis = EIXO Y'
+            E COM 'start = esquerda' e 'end = direita'
+            (se reverse => 'start = direita' e 'end = esquerda')
+            EM  'display-direction: column' :
+            main axis = EIXO Y cross axis = EIXO X
+            E COM 'start = cima' e 'end = baixo'
+            (se reverse => 'start = baixo' e 'end = cima')
+        */
+        .flexbox{
+            border: 3px solid red;
+            margin-bottom: 16px;
+            height: 250px;
+            display: flex;
+            /*
+                display: flex => afeta os elementos filhos DIRETOS
+                flex-wrap: nowrap => valor default; nao quebra linha
+                flex-wrap: wrap => quebra linha
+                flex-direction: row => valor default; alinhamento em 'fila'
+                flex-direction: column => alinhamento em coluna
+                OBS 1: reverse-row e reverse-column
+                OBS 2: flex-flow => atalho para [flex-direction] [flex-wrap]
+            */
+        }
+        .flexbox div{
+            border: 2px solid orange;
+            width: 300px;
+            margin: 16px;
+        }
+        .flex-container1{
+            flex-flow: row wrap;
+        }
+        .flex-container2{
+            justify-content: space-evenly;
+            /*
+                justify-content:  => posicao na flexbox na horizontal; linha
+                    flex-start => default; inicio da flexbox
+                    flex-end => fim da flexbox
+                    flex-center => meio da flexbox
+                    space-around => flex-items sao igualmente distribuidos na linha e
+                    com metade do espaço separando-os da flexbox no inicio e no fim da linha
+                    space-between => flex-items sao igualmente distribuidos na linha sem
+                    espaçamento entre o inicio e fim do flexbox na linha
+                    space-evenly => flex-items sao igualmente distribuidos na linha e com o
+                    mesmo espaço separando-os da flexbox no inicio e no fim da linha
+            */
+        }
+        .flex-container2 div{
+            width: 30px;
+            margin: 0;
+        }
+        .flex-container3{
+            justify-content: space-evenly;
+            /* align-items: flex-end; */
+            align-content: stretch;
+            flex-wrap: wrap;
+            /*
+                align-items: => disposicao vertical em uma unica linha ou
+                quando flex-wrap: nowrap
+                align-content: => disposicao vertical em quebra de linha (flex-wrap: wrap)
+                OBS : por conta de flex-wrap: wrap, o comando align-content esta sobrepondo
+                o align-items, ja que houve quebra de linha
+            */
+        }
+        .flex-container3 div{
+            width: 350px;
+        }
+        .flex-container4{
+            justify-content: center;
+            align-items: flex-end;
+            /* align-content: center; */
+            flex-wrap: nowrap;
+            /* OBS : por conta de flex-wrap: nowrap, o comando align-items esta sobrepondo
+            o align-content, ja que NAO houve quebra de linha  */
+        }
+        .flex-container4 div{
+            width: 50px;
+        }
+        .flex-container5{
+            flex-direction: column;
+            justify-content: flex-end;
+            /* align-items: flex-end; */
+            align-content: flex-end;
+            flex-wrap: wrap;
+            /*
+                justify-content : alinhamento em MAIN AXIS (no caso de column, EIXO Y)
+                align-items : alinhamento em CROSS AXIS (no caso de column, EIXO X)
+                            : flex-end EIXO X = direita
+                align-content: alinhamento em CROSS AXIS em quebra de linha (flex-wrap: wrap)
+            */
+            /*
+                column => flex-end = BAIXO
+                       => cross axis = EIXO X
+                       => main axis = EIXO Y
+            */
+            height: 400px;
+        }
+        .flex-container5 div{
+            background-color: yellow;
+            width: 50px;
+            height: 50px;
+        }
+        .flex-container6{
+            justify-content: flex-end;
+            align-items: flex-start;
+            height: 400px;
+        }
+        .flex-container6 div{
+            background-color: yellow;
+            width: 50px;
+            height: 50px;
+        }
+        .flex-container6 .div2{
+            flex-basis: 200px;
+            /*
+                main axis : (como row => EIXO X)
+            */
+        }
+        .flex-container7{
+            height: 400px;
+            gap: 10px;
+        }
+        .flex-container7 div{
+            background-color: yellow;
+            height: 50px;
+            margin: 0;
+            flex-basis: 100px;
+        }
+        .flex-container7 .div2{
+            flex-grow: 2;
+            /*
+                66,66% = 2/3
+                Realoca o espaço excede para os elementos com flex-grow de maneira proporcional
+                ao valor determinado
+            */
+            flex-shrink: 2;
+            /*
+                2/5
+                Determina a proporçao que o elemento diminui para que caiba no flex-container
+            */
+        }
+        .flex-container7 .div4{
+            flex-grow: 1;
+            /*
+                33,33% = 1/3
+            */
+            flex-shrink: 3;
+            /*
+                3/5
+            */
+        }
+        /*
+            OBS : 
+            flex: 1 2 200px;
+            => atalho para : [flex-grow] [flex-shrink] [flex-basis]
+        */
+        .flex-container8 div{
+            background-color: green;
+            color: white;
+            font-size: 36px;
+        }
+        .flex-container8 .div2{
+            order: 1;
+            /*
+                por padrao, todos elementos possuem order: 0
+            */
+            align-self: flex-start;
+            /*
+                alinhamento individual em cross axis
+            */
+        }
+        .flex-container8 .div4{
+            order: -1;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox flex-container1">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="flexbox flex-container2">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="flexbox flex-container3">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="flexbox flex-container4">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="flexbox flex-container5">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="flexbox flex-container6">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="flexbox flex-container7">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="flexbox flex-container8">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+</body>
+</html>
