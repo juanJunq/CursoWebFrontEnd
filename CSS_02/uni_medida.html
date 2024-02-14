@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 62.5%;
+            /*
+                % -> em relacao ao valor default do browser
+            */
+            padding-bottom: 500px;
+        }
+        h1{
+            font-size: 3.6em;
+        }
+        /*
+            em = unidade de medida com base no elemento pai
+            => Se font-size html = 62.5%, entao 1em = 10px  
+        */
+        p{
+            font-size: 3em;
+            /* 30px */
+        }
+        b{
+            color: red;
+            font-size: .5em;
+            /* 15px */
+            /*
+                Elemento pai de <b> -> <p>
+                Logo, 1em de <b> tem como base font-size em <p>
+            */
+        }
+        /*
+            rem = unidade de medida com funcionamento similar a em, mas com base
+            no elemento raiz
+            => Ou seja, com base no font-size html
+        */
+        i{
+            color: red;
+            font-size: 1.5rem;
+            /* 
+                1.5rem = 10px X 1.5 = 15px
+                Mesmo <i> sendo filho direto de <p>, se baseia no font-size html 
+            */
+        }
+        .porcentagem{
+            background-color: #ccc;
+            width: 500px;
+        }
+        .porcentagem p{
+            background-color: yellow;
+            margin: 10%;
+            padding: 20%;
+            /*
+                Valores em % em padding e margin se baseiam na largura do elemento pai
+                EX : width = 500px 
+                    -> margin = 10% => margin = 50px
+                    -> padding = 20% => padding = 100px
+            */
+        }
+        .padding{
+            background-color: #ccc;
+            width: 50%;
+        }
+        .padding p{
+            background-color: yellow;
+            margin: 50px;
+            font-size: 3rem;
+            padding: 3em;
+            /*
+                O valor de 3em no padding se baseia no
+                font-size do <p> que esta contido.
+                Nesse caso :
+                    font-size p = 30px
+                    padding = 3em => 3 X 30px = 90px
+                Logo, com -em-, o valor de padding aumenta
+                de maneira proporcional ao tamanho da fonte
+                ---------------------------------------------
+                Sendo -rem-, o padding estara se baseando no
+                font-size do html. 
+                Nesse caso:
+                    font-size html = 10px
+                    padding = 3rem => 3 X 10px = 30px
+                Logo, o padding nao acompanha o tamanho da fonte
+                e mantem de maneira constante o valor de 3rem(30px)
+            */
+        }
+        .viewport-container{
+            font-size: 3rem;
+            background-color: yellow;
+            width: 90%;
+            height: auto;
+        }
+        .viewport{
+            width: 90vw;
+            height: 90vh;
+            background-color: rgba(0, 0, 255, 0.459);
+            /*
+                As unidades vw e vh(Viewport Width / Viewport Height)
+                se baseiam nas dimensões disponiveis na regiao da viewport
+                90vw -> 90% da largura da viewport 
+                90vh -> 90% da altura da viewport
+                OBS : viewport = tamanho da janela do browser
+                    -> se largura = 50cm, 1vw = 0.5cm
+            */
+        }
+        .em{
+            width: 20em;
+            padding: 1em;
+            margin: 1em;
+            /*
+                width, padding e margin estao se baseando no font-size
+                Ou seja, como font-size = 1.6 X 10px = 16px : 
+                    width = 360px
+                    padding = 16px
+                    margin = 16px 
+            */
+            background-color: orange;
+            font-size: 1.6em;
+        }
+        .ch{
+            width: 20ch;
+            /*
+                A unidade -ch- se refere ao tamanho relativo de '0'
+                Ou seja, 20ch é *aproximadamente* o tamanho de 20 caracteres
+            */
+            padding: 1em;
+            margin: 1em;
+            background-color: orange;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unidades de medida</h1>
+    <p>Lorem ipsum dolor <b>texto em negrito</b> sit amet consectetur <i>texto em italico</i> adipisicing elit. Eos, id alias repellendus laborum expedita vel excepturi non veniam culpa ipsa, repellat iure nostrum dolore nesciunt quaerat labore quo? Est, optio.</p>
+    <div class="porcentagem">
+        <p>Porcentagem</p>
+    </div>
+    <div class="padding">
+        <p>Padding com em</p>
+    </div>
+    <div class="viewport-container">
+        <div class="viewport">Viewport</div>
+    </div>
+    <div class="em">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, iure esse vero saepe illo culpa minima recusandae soluta quam cumque?</div>
+    <div class="ch">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, odit nam. Sequi alias excepturi esse, reiciendis adipisci in dolorum distinctio!</div>
+</body>
+</html>
