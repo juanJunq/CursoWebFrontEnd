@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--
+        LINKS :
+            https://css-tricks.com/snippets/css/using-font-face-in-css/
+            https://www.fontsquirrel.com
+    -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+        @font-face {
+            font-family: silkscreen;
+            src: url(fonts/Silkscreen/slkscr.ttf) format("truetype"),
+                url(fonts/Silkscreen/slkscr-webfont.woff2) format("woff2"),
+                url(fonts/Silkscreen/slkscr-webfont.woff) format("woff");
+        }
+        h1, p{
+            font-family: silkscreen;
+            font-size: 100px;
+            text-align: center;
+            font-weight: normal;
+        }
+        b{
+            font-family: "Protest Guerrilla";
+        }
+    </style>
+</head>
+<body>
+    <h1>Font-face</h1>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum, dolor sit amet <b>fonte do google</b> consectetur adipisicing elit. Consectetur, doloremque!</p>
+</body>
+</html>
