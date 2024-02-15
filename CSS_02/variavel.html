@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        :root{
+            --header-height: 15rem;
+            --main-color: rgba(255, 0, 0, .5);
+            /*
+                Declaraçao de variavel
+            */
+        }
+        html{
+            font-size: 62.5%;
+        }
+        header{
+            width: 100%;
+            background-color: var(--main-color);
+            height: var(--header-height);
+            font-size: 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        main{
+            /*
+                Havendo duas variaveis com o mesmo nome, a prioridade é da 
+                variavel que aparece no proprio escopo(proprio container).
+                Nao encontrando a variavel no proprio escopo, procura-se nos
+                niveis superiores.
+                EX : --main-color em <main> e :root
+            */
+            --main-color: #ccc;
+            min-height: calc(100vh - 25rem);
+            background-color: var(--main-color);
+            font-size: 2rem;
+            margin-top: var(--header-height);
+        }
+        footer{
+            height: 10rem;
+            font-size: 2rem;
+            background-color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>main</main>
+    <footer>footer</footer>
+</body>
+</html>
