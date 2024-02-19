@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition</title>
+    <style>
+        div{
+            background-color: rgb(255, 165, 0);
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            transition-property: width, height, background-color, border-radius;
+            transition-duration: .5s, 1s, 1.5s;
+            transition-timing-function: cubic-bezier(1,-0.25,.43,2);
+            transition-delay: .5s, 0s, 0s;
+            /*
+                OBS : atalho                            (default)
+                    -> transition: property(all) duration(0s) time-function(ease) delay(0s)
+            */
+        }
+        div:hover{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(0, 165, 255);
+            border-radius: 50%;
+
+        }
+    </style>
+</head>
+<body>
+        <div></div>
+</body>
+</html>

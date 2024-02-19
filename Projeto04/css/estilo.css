@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:wght@400;700&display=swap');
+:root{
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    background-color: #162028;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.6rem;
+}
+.logo{
+    font-family: 'Italiana', sans-serif;
+    color: white;
+    font-size: 6.4rem;
+    margin-left: 25rem;
+}
+.list{
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    gap: 8rem;
+    font-size: 2.4rem;
+}
+.list__item__link{
+    color: #425564;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 4.2rem;
+    letter-spacing: .8rem;
+}
+.header-container{
+    background-image: url("../imagens/topo.jpg");
+    background-size: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.main__content{
+    margin: 0 auto;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.main__content__title{
+    font-family: 'Italiana', sans-serif;
+    font-size: 5.6rem;
+    margin-top: 12rem;
+}
+.main__content__text{
+    line-height: 2;
+    font-size: 2.6rem;
+    color: #555;
+    width: 90ch;
+    margin-bottom: 10rem;
+}
+.main__images{
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    margin-bottom: 12rem;
+}
+.main__images img{
+    width: 40rem;
+}
+.main__image__title{
+    color:  #555;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.4rem;
+    text-align: center;
+    letter-spacing: .3rem;
+    margin-bottom: .8rem;
+}
+.main__image__text{
+    color:  #555;
+    text-align: center;
+    font-size: 2rem;
+}
+.bottom{
+    background-image: url("../imagens/bg_detalhe.png");
+    background-size: 100%;
+    height: 100vh;
+    color: white;
+}
+.bottom__content{
+    width: 90vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.bottom__title{
+    font-family: 'Italiana', sans-serif;
+    font-size: 7.2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 15rem 0 0 20rem;
+}
+.bottom__text{
+    margin: 10rem 0 0 20rem;
+    font-size: 2.6rem;
+    line-height: 1.8;
+    width: 65ch;
+}
+.footer{
+    background-color: #0b171f;
+    color: #6f8597;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 2.8rem;
+    letter-spacing: .5rem;
+}
