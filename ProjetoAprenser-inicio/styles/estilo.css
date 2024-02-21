@@ -1,0 +1,164 @@
+:root{
+    --primary-color: #fed001;
+
+}
+html{
+    font: 400 62.5% 'Inter', sans-serif;
+    /* font-weight: 400;
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif; */
+    scroll-behavior: smooth;
+}
+p, a{
+    font-size: 1.6rem;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+nav a{
+    color: inherit;
+}
+.wrapperContainer{
+    padding-top: 1px;
+}
+.upper{
+    text-transform: uppercase;
+}
+.btn{
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 1.6rem 4.6rem;
+    display: inline-block;
+    color: inherit;
+}
+.wrapperContainer-dark{
+    background-color: #2a2a2a;
+    color: #fafafa;
+}
+.wrapperContainer-light{
+    background-color: #fafafa;
+}
+.wrapperContainer-dark2{
+    background-color: #003464;
+    color: #fafafa;
+}
+.container{
+    max-width: 127.6rem;
+    margin: auto;
+}
+.section_title{
+    padding: 7rem 0;
+    text-align: center;
+    margin: 0;
+    /*
+        stylesheet do user agent adiciona uma margem aos elementos h2,
+        o que ocasiona na soma dos valores de padding e margin, aumentando
+        o espaço ocupado pelo elemento
+        Por isso, margin acaba recebendo 0 
+    */
+}
+.scroll{
+    position: sticky;
+    top: 0;
+}
+.wrapperContainer-padding{
+    padding-top: 12rem;
+}
+.section_btn{
+    margin: 7rem 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 2rem 0;
+}
+.header_nav a{
+    padding: .75em 1.15em;
+    border: 1px solid;
+    text-decoration: none;
+}
+.header_nav ul{
+    display: flex;
+    gap: .6rem;
+    list-style-type: none;
+}
+.header_nav a:hover{
+    background-color: black;
+}
+.wrapperContainer-hero{
+    background-image: linear-gradient(transparent, rgb(255, 255, 51));
+}
+.heroBanner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20rem;
+}
+.hero_title{
+    margin-bottom: 4rem;
+}
+.cursos{
+    text-align: center;
+}
+.cursosContainer{
+    display: flex;
+    text-align: left;
+    gap: 2rem;
+}
+.curso_card{
+    flex: 1;
+}
+.curso_card img{
+    display: block;
+    width: 100%;
+}
+.curso_card h3{
+    font-size: 2.4rem;
+}
+.curso_card p{
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+.cursos_card_content{
+    padding: 1rem 1.25rem;
+    border: 1px solid #ccc;
+    border-top: transparent;
+    border-radius: 0 0 8px 8px;
+}
+.section_escola{
+    display: flex;
+    gap: 5rem;
+    padding-top: 6rem;
+}
+.section_escola h2{
+    margin-top: 2rem;
+    font-size: 3.2rem;
+}
+.section_escola p{
+    line-height: 1.5;
+    font-size: 1.8rem;
+}
+.endereco{
+    text-align: right;
+    padding: 3rem 0;
+    font-size: 1.6rem;
+    font: normal 400 1.8rem 'Inter', sans-serif;
+}
+.footer{
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.6rem;
+}
+.footer a{
+    color: inherit;
+}
