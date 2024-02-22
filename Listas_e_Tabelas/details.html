@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        details{
+            background-color: #ccc;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+        details summary:hover{
+            cursor: pointer;
+            background-color: black;
+            color: #ccc;
+        }
+        details[open]{
+            background-color: black;
+            color: #ccc;
+        }
+        /*
+            [open] -> alterar propriedades de um elemento
+            pelo seu atributo
+        */
+        details[open]:hover{
+            background-color: #ccc;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        open -> atributo de valor booleano
+    -->
+    <details open>
+        <summary>HTML</summary>
+        <p>Linguagem de marcação de hipertexto</p>
+    </details>
+    <details>
+        <summary>CSS</summary>
+        <p>Usado para criar folhas de estilo</p>
+    </details>
+</body>
+</html>

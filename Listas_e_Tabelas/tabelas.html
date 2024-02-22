@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabela</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        table{
+            width: 80%;
+            margin: auto;
+            background-color: beige;
+            border-collapse: collapse;
+        }
+        th{
+            background-color: rgb(241, 241, 161);
+            border: 2px solid rgb(172, 172, 27);
+            padding: 16px;
+        }
+        td{
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+    <!-- 
+        <caption> = 'Titulo' da tabela
+        <tr> = Abre uma linha da tabela
+        <td> = Referente ao dado da tabela; o que a linha contem
+        rowspan e colspan = Atributo referente ao numero de linhas e colunas, respectivamente,
+        que uma célula da tabela irá ocupar
+    -->
+<body>
+    <table>
+        <caption>Tabela de preços de cursos</caption>
+        <thead>
+            <tr>
+                <th>Área</th>
+                <th>Curso</th>
+                <th>Investimento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">Design</td>
+                <td>InDesign</td>
+                <td>R$ 1000,00</td>
+            </tr>
+            <tr>
+                <td>Ilustrator</td>
+                <td>R$ 1000,00</td>
+            </tr>
+            <tr>
+                <td>Photoshop</td>
+                <td>R$ 1000,00</td>
+            </tr>
+            <tr>
+                <td rowspan="4">Development</td>
+                <td>HTML</td>
+                <td>R$ 1000,00</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>R$ 1000,00</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>R$ 1000,00</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>R$ 1000,00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Valores sujeitos a alterações sem prévio aviso</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
