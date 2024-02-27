@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        <label> : 'Legenda' do input
+        <input> : Campo de interação onde o usuário pode fornecer conteúdo
+        OBS : O atributo method especifica como os dados do formulario devem ser enviados
+            Se method="get", form-data é enviado como uma varíavel da URL
+                -> dados visíveis na URL(não recomendado para dados confidenciais)
+                -> tamanho limitado(3000 caracteres)
+                -> bookmarkable
+            Se method="post", form-data é enviado como uma transação HTTP
+                -> dados 'dentro' do request HTTP(nao visível na URL)
+                -> tamanho ilimitado
+                -> not bookmarkable
+    -->
+    <h1>Formulario de busca</h1>
+    <form action="https://www.google.com/search" method="get">
+        <label for="busca">Faça uma busca</label>
+        <input type="text" name="q" id="busca">
+        <input type="submit" value="OK">
+    </form>
+</body>
+</html>
